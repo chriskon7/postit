@@ -1,10 +1,10 @@
 <div class = 'row'>
   <div class = 'span8 well'>
       <%= render post.categories %>
-      <h4><%= link_to post.title, post.url %></h4>
+      <h4><%= link_to post.title, fix_url(post.url) %></h4>
       <p><%= post.description %><p>
         <p>
-          <span class= 'quiet'>posted by</span> <%= post.creator.username %> on <%= post.created_at %>
+          <span class= 'quiet'>posted by</span> <%= post.creator.username %> on <%= display_datetime(post.created_at) %>
         </p>
         <small>
           <span>

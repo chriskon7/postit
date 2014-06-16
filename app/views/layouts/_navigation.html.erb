@@ -1,6 +1,7 @@
 <ul class="nav">
   <li>
     <%= link_to "Postit!", root_path, :class => 'brand' %>
+    <%= link_to "Dogs!", '/dogs', :class => 'brand' %>
   </li>
   <li>
     <%= link_to 'link', '' %>
@@ -27,4 +28,8 @@
 </div>
 <div class= 'nav_item'>
   <%= link_to 'New Post', new_post_path, class: 'btn btn-success btn-small' %>
+</div>
+
+<div class= 'nav_item'>
+  <%= link_to 'New Dog', new_dog_path, class: 'btn btn-success btn-small' %>
 </div>

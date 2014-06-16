@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+    @comment = Comment.new
   end
 
   def new
@@ -34,7 +34,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    
 
     if @post.update(post_params)
       flash[:notice] = 'This post was updated.'
@@ -48,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :url, :description)
+    params.require(:post).permit(:title, :url, :description, category_ids: [])
   end
 
   def set_post
